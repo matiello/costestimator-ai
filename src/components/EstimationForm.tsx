@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Calendar } from "@/components/ui/calendar";
@@ -33,9 +32,10 @@ import { EstimationFormData, SystemType } from "@/types";
 
 interface EstimationFormProps {
   onSubmit: (data: EstimationFormData) => void;
+  isLoading?: boolean;
 }
 
-const EstimationForm = ({ onSubmit }: EstimationFormProps) => {
+const EstimationForm = ({ onSubmit, isLoading = false }: EstimationFormProps) => {
   const [formData, setFormData] = useState<EstimationFormData>({
     projectName: "",
     systemType: "BSS",
@@ -44,8 +44,6 @@ const EstimationForm = ({ onSubmit }: EstimationFormProps) => {
     teamSize: 3,
     startDate: new Date(),
   });
-  
-  const [processingAI, setProcessingAI] = useState(false);
   
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -66,13 +64,7 @@ const EstimationForm = ({ onSubmit }: EstimationFormProps) => {
   
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setProcessingAI(true);
-    
-    // Simulate AI processing time
-    setTimeout(() => {
-      onSubmit(formData);
-      setProcessingAI(false);
-    }, 1500);
+    onSubmit(formData);
   };
   
   return (
@@ -207,12 +199,12 @@ const EstimationForm = ({ onSubmit }: EstimationFormProps) => {
             <Button 
               type="submit" 
               className="w-full bg-telecom-600 hover:bg-telecom-700 text-white"
-              disabled={processingAI}
+              disabled={isLoading}
             >
-              {processingAI ? (
+              {isLoading ? (
                 <>
                   <Cpu className="mr-2 h-4 w-4 animate-pulse" />
-                  Processando com IA...
+                  Consultando IA para análise...
                 </>
               ) : (
                 "Gerar Estimativa"

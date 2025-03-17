@@ -11,11 +11,14 @@ import { useToast } from "@/components/ui/use-toast";
 
 const Index = () => {
   const [estimation, setEstimation] = useState<ProjectEstimation | null>(null);
+  const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
 
-  const handleFormSubmit = (data: EstimationFormData) => {
+  const handleFormSubmit = async (data: EstimationFormData) => {
     try {
-      const result = generateEstimation(
+      setIsLoading(true);
+      
+      const result = await generateEstimation(
         data.projectName,
         data.systemType,
         data.description,
@@ -43,6 +46,8 @@ const Index = () => {
         description: "Ocorreu um erro ao processar os dados. Por favor, tente novamente.",
         variant: "destructive",
       });
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -65,7 +70,7 @@ const Index = () => {
         <>
           <Hero />
           <ProjectInfo />
-          <EstimationForm onSubmit={handleFormSubmit} />
+          <EstimationForm onSubmit={handleFormSubmit} isLoading={isLoading} />
         </>
       )}
     </Layout>
