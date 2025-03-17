@@ -1,0 +1,65 @@
+
+<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
+      <path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(59, 130, 246, 0.1)" stroke-width="0.5"/>
+    </pattern>
+    <circle id="dot" cx="1" cy="1" r="1" fill="rgba(59, 130, 246, 0.2)"/>
+    <path id="wave" d="M 0 5 C 2.5 0, 7.5 0, 10 5" fill="none" stroke="rgba(59, 130, 246, 0.1)" stroke-width="0.5"/>
+    <circle id="node" cx="5" cy="5" r="1.5" fill="rgba(59, 130, 246, 0.15)"/>
+  </defs>
+  <rect width="100" height="100" fill="url(#grid)"/>
+  <g>
+    <use href="#node" x="5" y="5"/>
+    <use href="#node" x="25" y="15"/>
+    <use href="#node" x="45" y="5"/>
+    <use href="#node" x="65" y="15"/>
+    <use href="#node" x="85" y="5"/>
+    <use href="#node" x="5" y="25"/>
+    <use href="#node" x="25" y="35"/>
+    <use href="#node" x="45" y="25"/>
+    <use href="#node" x="65" y="35"/>
+    <use href="#node" x="85" y="25"/>
+    <use href="#node" x="5" y="45"/>
+    <use href="#node" x="25" y="55"/>
+    <use href="#node" x="45" y="45"/>
+    <use href="#node" x="65" y="55"/>
+    <use href="#node" x="85" y="45"/>
+    <use href="#node" x="5" y="65"/>
+    <use href="#node" x="25" y="75"/>
+    <use href="#node" x="45" y="65"/>
+    <use href="#node" x="65" y="75"/>
+    <use href="#node" x="85" y="65"/>
+    <use href="#node" x="5" y="85"/>
+    <use href="#node" x="25" y="95"/>
+    <use href="#node" x="45" y="85"/>
+    <use href="#node" x="65" y="95"/>
+    <use href="#node" x="85" y="85"/>
+  </g>
+  <g>
+    <line x1="5" y1="5" x2="25" y2="15" stroke="rgba(59, 130, 246, 0.1)" stroke-width="0.3"/>
+    <line x1="25" y1="15" x2="45" y2="5" stroke="rgba(59, 130, 246, 0.1)" stroke-width="0.3"/>
+    <line x1="45" y1="5" x2="65" y2="15" stroke="rgba(59, 130, 246, 0.1)" stroke-width="0.3"/>
+    <line x1="65" y1="15" x2="85" y2="5" stroke="rgba(59, 130, 246, 0.1)" stroke-width="0.3"/>
+    
+    <line x1="5" y1="25" x2="25" y2="35" stroke="rgba(59, 130, 246, 0.1)" stroke-width="0.3"/>
+    <line x1="25" y1="35" x2="45" y2="25" stroke="rgba(59, 130, 246, 0.1)" stroke-width="0.3"/>
+    <line x1="45" y1="25" x2="65" y2="35" stroke="rgba(59, 130, 246, 0.1)" stroke-width="0.3"/>
+    <line x1="65" y1="35" x2="85" y2="25" stroke="rgba(59, 130, 246, 0.1)" stroke-width="0.3"/>
+    
+    <line x1="5" y1="45" x2="25" y2="55" stroke="rgba(59, 130, 246, 0.1)" stroke-width="0.3"/>
+    <line x1="25" y1="55" x2="45" y2="45" stroke="rgba(59, 130, 246, 0.1)" stroke-width="0.3"/>
+    <line x1="45" y1="45" x2="65" y2="55" stroke="rgba(59, 130, 246, 0.1)" stroke-width="0.3"/>
+    <line x1="65" y1="55" x2="85" y2="45" stroke="rgba(59, 130, 246, 0.1)" stroke-width="0.3"/>
+    
+    <line x1="5" y1="65" x2="25" y2="75" stroke="rgba(59, 130, 246, 0.1)" stroke-width="0.3"/>
+    <line x1="25" y1="75" x2="45" y2="65" stroke="rgba(59, 130, 246, 0.1)" stroke-width="0.3"/>
+    <line x1="45" y1="65" x2="65" y2="75" stroke="rgba(59, 130, 246, 0.1)" stroke-width="0.3"/>
+    <line x1="65" y1="75" x2="85" y2="65" stroke="rgba(59, 130, 246, 0.1)" stroke-width="0.3"/>
+    
+    <line x1="5" y1="85" x2="25" y2="95" stroke="rgba(59, 130, 246, 0.1)" stroke-width="0.3"/>
+    <line x1="25" y1="95" x2="45" y2="85" stroke="rgba(59, 130, 246, 0.1)" stroke-width="0.3"/>
+    <line x1="45" y1="85" x2="65" y2="95" stroke="rgba(59, 130, 246, 0.1)" stroke-width="0.3"/>
+    <line x1="65" y1="95" x2="85" y2="85" stroke="rgba(59, 130, 246, 0.1)" stroke-width="0.3"/>
+  </g>
+</svg>
